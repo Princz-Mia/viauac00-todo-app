@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:gravity="center"
+        android:layout_weight="2">
+
+        <ImageView
+            android:id="@+id/titleImageView"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            android:paddingRight="24dp"
+            android:paddingLeft="12dp"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background"
+        android:src="@drawable/dotted_line"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:id="@+id/linearlistRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:gravity="center"
+        android:layout_weight="2">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRecyclerView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lists_background"
+            android:layout_marginLeft="32dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/list_item"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <ImageButton
+            android:id="@+id/addListButton"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_add_new_list" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background"
+        android:src="@drawable/dotted_line"
+        android:layerType="software" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tasksRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="14"
+        android:layout_marginBottom="24dp"
+        tools:listitem="@layout/task_item"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background"
+        android:src="@drawable/dotted_line"
+        android:layerType="software" />
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/background"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="2">
+
+        <Spinner
+            android:id="@+id/sortSpinner"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="24dp"
+            android:background="@mipmap/ic_sort_image"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:foreground="@mipmap/ic_sort_image"/>
+
+        <ImageButton
+            android:id="@+id/moreOptionsButton"
+            android:layout_marginLeft="188dp"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_more_button" />
+
+        <ImageButton
+            android:id="@+id/addTaskButton"
+            android:layout_marginLeft="24dp"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/ic_add_new" />
+    </LinearLayout>
+</LinearLayout>

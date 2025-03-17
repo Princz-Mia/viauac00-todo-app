@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">TodoApplication</string>
+    <string name="title">TO-DO Application</string>
+
+    <string name="name">Name</string>
+    <string name="task_description">Description</string>
+    <string name="task_list">Task\'s List</string>
+    <string name="task_deadline">Deadline</string>
+    <string name="task_deadline_specified">Deadline: %d</string>
+    <string name="task_deadline_not_specified">Deadline: Not specified %d</string>
+    <string name="new_task">New Task</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="priority">Priority</string>
+    <string name="select_deadline">Select Deadline</string>
+    <string name="mark_as_completed">Mark as completed</string>
+    <string name="more_options">More Options</string>
+    <string name="edit_list_s_name">Edit List\'s name</string>
+    <string name="delete_list">Delete List\nDefault list cannot be deleted</string>
+    <string name="delete_all_completed_tasks">Delete all completed tasks</string>
+    <string name="list">List</string>
+    <string name="save">Save</string>
+    <string name="new_list">New List</string>
+    <string name="default_list_name">Default List</string>
+    <string name="task_item_name_missing">Name for task is missing.</string>
+
+    <string name="preference_sort">PREFERENCE_SORT</string>
+    <string name="sort">sort</string>
+    <string name="sort_by_name">Sort by Name</string>
+    <string name="sort_by_priority">Sort by Priority</string>
+    <string name="sort_by_deadline">Sort by Deadline Date</string>
+    <string name="sort_by_creation">Sort by Creation Date</string>
+    <string name="undefined_behaviour">Undefined behaviour</string>
+
+    <string name="test_task_item_name">Homework</string>
+    <string name="test_task_item_desc">Finish MobWeb homework</string>
+    <string name="test_task_item_priority">HIGH</string>
+    <string name="test_task_item_deadline">Homework</string>
+
+    <string-array name="priority_items">
+        <item>LOW</item>
+        <item>MEDIUM</item>
+        <item>HIGH</item>
+    </string-array>
+
+    <string-array name="sortBy">
+        <item>Sort by Name</item>
+        <item>Sort by Priority</item>
+        <item>Sort by Deadline Date</item>
+        <item>Sort by Creation Date</item>
+    </string-array>
+</resources>

@@ -1,0 +1,215 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:weightSum="16">
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/background"
+            android:gravity="center"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/titleImageView"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="48dp"
+                android:maxHeight="48dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:paddingTop="24dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="24dp"
+                android:text="@string/title"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/background"
+            android:src="@drawable/dotted_line"
+            android:layerType="software" />
+
+        <LinearLayout
+            android:id="@+id/taskNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/background"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:layout_weight="2">
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:background="@android:color/transparent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="48dp"
+                android:maxHeight="48dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/ic_back_button" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/background"
+            android:src="@drawable/dotted_line"
+            android:layerType="software" />
+
+        <LinearLayout
+            android:id="@+id/taskAttributesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/taskDescriptionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:gravity="center"
+                android:layout_gravity="left" >
+
+                <ImageView
+                    android:id="@+id/taskDescriptionImage"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_desc_image" />
+
+                <EditText
+                    android:id="@+id/desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/taskDeadlineLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:id="@+id/taskDeadlineImage"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_calendar_image" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deadlinePickerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    android:text="@string/select_deadline" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/taskPriorityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="left">
+
+                <ImageView
+                    android:id="@+id/taskPriorityImage"
+                    android:background="@android:color/transparent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="48dp"
+                    android:maxHeight="48dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/ic_priority_image" />
+
+                <Spinner
+                    android:id="@+id/spPriority"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:background="@color/linear_background"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/completeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/mark_as_completed" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
